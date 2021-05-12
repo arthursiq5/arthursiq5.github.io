@@ -1,6 +1,8 @@
 @import './Sass/colors';
+@import './Sass/container';
 
 body{
+  @include container;
   font-family: sans-serif;
   background-color: $bgColor;
   margin: 0;

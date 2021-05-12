@@ -1,0 +1,16 @@
+@mixin container($uid: container, $small: 60%, $medium: 70%, $large: 80%, $xlarge: 90%) {
+    $container: (
+        '': 100%,
+        '-sm': $small,
+        '-md': $medium,
+        '-lg': $large,
+        '-xl': $xlarge,
+    );
+    @each $prop, $value in $container {
+        .#{$uid}#{$prop} {
+            max-width: $value;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
